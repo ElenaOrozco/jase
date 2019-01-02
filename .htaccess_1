@@ -1,0 +1,63 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond $1 !^(index\.php|images|robots\.txt|css|js|fonts|img|less|temp|favicon\.ico|ajaxnullsource\.txt)
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule> 
+
+# AddOutputFilterByType DEFLATE text/xml
+# AddOutputFilterByType DEFLATE text/css
+# AddOutputFilterByType DEFLATE application/javascript
+# AddOutputFilterByType DEFLATE application/x-javascript
+# AddOutputFilterByType DEFLATE application/xml
+# AddOutputFilterByType DEFLATE application/xhtml+xml
+# AddOutputFilterByType DEFLATE application/rss+xml
+# AddOutputFilterByType DEFLATE application/x-httpd-php
+
+<ifmodule mod_deflate.c="">
+  # force deflate for mangled headers
+  # developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+  <ifmodule mod_setenvif.c="">
+    <ifmodule mod_headers.c="">
+      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+      RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+    </ifmodule>
+  </ifmodule>
+
+  # HTML, TXT, CSS, JavaScript, JSON, XML, HTC:
+  <ifmodule filter_module="">
+    FilterDeclare   COMPRESS
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/html
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/css
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/plain
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/xml
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/x-component
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/javascript
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/json
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/xml
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/xhtml+xml
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/rss+xml
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/atom+xml
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/vnd.ms-fontobject
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $image/svg+xml
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/x-font-ttf
+    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $font/opentype
+    FilterChain     COMPRESS
+    FilterProtocol  COMPRESS  DEFLATE change=yes;byteranges=no
+  </ifmodule>
+
+  <ifmodule !mod_filter.c="">
+    # Legacy versions of Apache
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+    AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml 
+	AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE image/svg+xml application/vnd.ms-fontobject 
+	AddOutputFilterByType DEFLATE application/x-font-ttf font/opentype
+  </ifmodule>
+</ifmodule>
+
+php_value upload_max_filesize 128M  
+php_value post_max_size 128M  
+php_value max_input_time 3600  
+php_value max_execution_time 3600

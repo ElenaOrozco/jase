@@ -1,0 +1,454 @@
+body{
+	font-family:'Lato', sans-serif;
+  font-size: 16px;
+}
+
+/* -------Font-------*/
+.text-lg{
+  font-size: 5rem;
+}
+
+.text-md{
+  font-size: 3rem;
+}
+
+.text-sm{
+  font-size: .9rem;
+
+}
+
+.monserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+.lato{
+  font-family: 'Lato', sans-serif;
+}
+
+/* ------/Font Size-------*/
+
+/* -------Colors --------*/
+.bg-medium-blue{
+  background: #072a53;
+}
+.bg-dark-blue{
+  background: #062548;
+}
+
+.text-gris{
+  color: #d2c4c4;;
+}
+
+/*-------/Colors ---------*/
+
+.line{
+  border-bottom: 1px solid #ced4da;
+
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0 .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+
+/*------Navbar-------------*/
+.my-link{
+  color: rgba(5, 13, 68, 0.9) !important;
+  font-size: 1rem;
+  padding-left: 15px;
+  letter-spacing: .2px;
+
+}
+
+.my-link:hover{
+  background: orange;
+}
+.btn-search:hover{
+
+}
+.link-login{
+  margin-bottom: 0;
+  padding-right: 20px;
+}
+
+.link-login:hover{
+  list-style: none;
+  color: orange;
+}
+
+.data{
+  height: 40px !important;
+  color: #eee;
+}
+
+.data-cl{
+
+  color: #d2c4c4;
+
+}
+
+.data-redes{
+  font-size: 1.4em;
+}
+
+#btn-search:focus{
+  box-shadow: none !important;
+
+}
+
+
+
+/*-----/Navbar-------------*/
+
+
+
+/* ------Slide Principal --*/
+.slide-principal{
+  height: 85vh !important;
+ 
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 90vh !important;
+}
+.carousel-caption{
+  height: 100%;
+}
+
+.carousel-caption h5{
+  font-style: 4em;
+  padding-top: 20px;
+}
+/* -----/Slide Principal --*/
+
+
+
+/* ------Slide Productos ------*/
+.slider-productos{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-productos ul{
+  display: flex;
+  padding: 0;
+  width: 200%;
+
+  animation: cambio-p 15s infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+
+}
+
+
+
+
+
+.slider-productos li{
+  width: 25%;
+  list-style: none;
+}
+
+
+.slider-productos img{
+  width: 100%;
+  height: 250px;
+  
+}
+@keyframes cambio-p{
+  0% {margin-left: 0;}
+  10% {margin-left: 0;}
+
+  20% {margin-left: -25%;}
+  30% {margin-left: -25%;}
+
+  40% {margin-left: -50%;}
+  50% {margin-left: -50%;}
+
+  60% {margin-left: -75%;}
+  70% {margin-left: -75%;}
+
+  80% {margin-left: -100%;}
+  100% {margin-left: -100%;}
+}
+
+
+
+/* -----/Slide Main ------*/
+
+/* ------Slide Main ------*/
+.slider{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 5s infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  
+}
+
+
+
+
+
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+
+
+.slider img{
+  width: 100%;
+  height: 60vh;
+}
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+
+
+/* -----/Slide Main ------*/
+
+
+.title-section{
+	text-align: center;
+	font-size: 2.3em !important;
+	color: #4A4444;
+	text-transform: uppercase;
+	letter-spacing: 3%;
+	
+}
+
+
+
+/*---------Frase -------*/
+.marketing{
+	height: 300px;
+	background: #eee;
+	color: #000;
+  background: url("../img/empresa/literature-header.png");
+
+  background-size: 100% 100%;
+ 
+
+}
+.marketing h5{
+  padding: 20px;
+}
+
+/*--------/Frase -------*/
+
+
+
+
+.text-principal{
+	color: #0a0a65;
+}
+
+
+bg-negro{
+	background: #000 !important;
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+figure.snip0015 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  /*
+  margin: 10px;
+
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  */
+  
+  width: 100%;
+  background: #000000;
+  text-align: center;
+}
+figure.snip0015 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0015 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0015 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3em 3em;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0015 figcaption::before {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  bottom: 50%;
+  left: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: #ffffff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0015 h2,
+figure.snip0015 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.snip0015 h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0015 h2 span {
+  font-weight: 800;
+}
+figure.snip0015 p {
+  font-weight: 200	;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0015 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0015:hover img {
+  opacity: 0.35;
+}
+figure.snip0015:hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0015:hover figcaption p {
+  opacity: 0.9;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0015:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  top: 30px;
+  bottom: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+/* ------- Star Marcas --------*/
+
+.marcas h3{
+	text-align: center;
+	font-size: 300%;
+	color: #4A4444;
+	text-transform: uppercase;
+	letter-spacing: 1%;
+	
+}
+
+.marcas img{
+	
+}
+
+
+
+
+/* ------- End Marcas --------*/
+
+/* ------- Star Parallax --------*/
+
+.parallax-inner h2{
+	text-align: center;
+	font-size: 575%;
+	color: #4A4444;
+	text-transform: uppercase;
+	letter-spacing: 1%;
+	margin: 45% 0;
+}
+
+.parallax-inner h3{
+	text-align: center;
+	font-size: 275%;
+	color: #E5E5E5;
+	text-transform: uppercase;
+	letter-spacing: 1%;
+	
+}
+
+.parallax{
+	background: url("../img/empresa/J19O6028.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+
+.parallax-inner{
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+
+/* ------- End Parallax --------*/
+
+
+/*-------Nosotros---------------*/
+.nosotros img{
+  height: 300px;
+  width: 100%;
+}
+
+/*------/Nosotros---------------*/
+
