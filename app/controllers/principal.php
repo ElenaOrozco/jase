@@ -13,10 +13,11 @@ class Principal extends MY_Controller {
     }
 
     public function index() {
-                    
-       
-    
-        $this->load->view('welcome_message');
+        $this->load->model("productos_model");
+        $limit = 8;
+        $data['productos'] = $this->productos_model->listado_productos_slider($limit);
+
+        $this->load->view('welcome_message', $data);
     }
     public function index_login() {
         			

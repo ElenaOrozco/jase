@@ -73,11 +73,12 @@ $db['production']['hostname'] = '156.67.222.96';
 $db['production']['username'] = 'u103049071_elena';
 $db['production']['password'] = 'aresricardo';
 $db['production']['database'] = 'u103049071_obras';
+
 */
 $db['production']['hostname'] = 'localhost';
 $db['production']['username'] = 'root';
 $db['production']['password'] = '';
-$db['production']['database'] = 'obras';
+$db['production']['database'] = 'proardic_jase';
 $db['production']['dbdriver'] = 'mysql';
 $db['production']['dbprefix'] = '';
 $db['production']['pconnect'] = TRUE;

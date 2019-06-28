@@ -12,7 +12,8 @@ class Nosotros extends CI_Controller {
 	
 	public function index()
 	{
-		
-		$this->load->view('v_nosotros');
+		$this->load->model('productos_model');
+		$data['categorias'] = $this->productos_model->listar_categorias();
+		$this->load->view('v_nosotros', $data);
 	}
 }

@@ -41,6 +41,18 @@
 $route['default_controller'] = "principal";
 $route['404_override'] = '';
 
+$route['productos/pagina'] = 'productos';//cuando sea la primera página
+$route['productos/pagina/(:num)'] = 'productos';
 
+
+$route['productos/listado_categoria/(\ d +)/pagina'] =  function  ( $idCategoria ) 
+{ 
+        return  'productos/listado_categoria/'  . $idCategoria; 
+};
+
+$route [ 'products/listado_categoria/(\ d +)/pagina/(:num)' ]  =  function  ( $idCategoria ) 
+{ 
+        return  'productos/listado_categoria/'  . $idCategoria.  '/pagina/(:num)' ; 
+};
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -1,25 +1,18 @@
-﻿<?php $this->load->view('layouts/header') ?>
+﻿<?php $this->load->view('admin/layouts/header') ?>
   <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <h1>
-      Home
-      <small>Principal</small>
-    </h1>
-    <ol class="breadcrumb">
-      <li class="active"><a href="<?php echo site_url(); ?>"><i class="fa fa-dashboard"></i> Principal</a></li>
-     
-    </ol>
-  </section>
   
-  <section class="content" style="height: 100vh;">
+  
+  <section class="content d-flex justify-content-center" style="height: 90vh;">
 
-    <div class="row">
-      <div class="col-md-4">
-        
-       
-          
-        
-      </div>
+    <div class="row m-auto">
+        <div class="col-md-4 col-md-offset-4">
+          <figure class="text-center">
+            <a class="navbar-brand p-1" href="<?= base_url() ?>">
+              <img src="<?= base_url("img/logo_corto.png")?>"  height="40" alt="">
+            </a>
+           
+          </figure>
+        </div>
     </div>
 
     
@@ -31,6 +24,4 @@
 
   
 
-<?php $this->load->view('layouts/footer') ?>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo site_url(); ?>dist/js/pages/dashboard2.js"></script>
+<?php $this->load->view('admin/layouts/footer') ?>

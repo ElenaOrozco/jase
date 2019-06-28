@@ -7,45 +7,124 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <?php if (isset($meta)) echo meta($meta); ?>  
 
-       <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <!-- Bootstrap 3.3.5 -->
-         <!-- Bootstrap 3.3.5 -->
-        <link rel="stylesheet" href="<?php echo site_url(); ?>/bootstrap/css/bootstrap.min.css">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="<?php echo site_url(); ?>/dist/css/AdminLTE.min.css">
-        <!-- iCheck -->
-        <link rel="stylesheet" href="<?php echo site_url(); ?>/plugins/iCheck/square/blue.css">
-          
-        <link href="<?php echo site_url(); ?>dist/css/style.css" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <!-- Custom styles for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link href="<?php echo base_url("css/style.css") ?>" rel="stylesheet">
+
+        <style>
+                body
+{
+    margin: 0;
+    padding: 0;
+    background: url("<?= base_url('img/EMPRESA/Ventajas-de-la-iluminacion-LED-en-tu-empresa.jpg') ?>") no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.loginBox
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 520px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+}
+
+h2
+{
+    margin: 0;
+    padding: 0 0 10px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.loginBox p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+.loginBox input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginBox input[type="text"],
+.loginBox input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+
+}
+::placeholder
+{
+    color: rgba(255,255,255,.5);
+}
+.loginBox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: #2196f3;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.loginBox input[type="submit"]:hover
+{
+    background: #3f51b5;
+    color: #fff;
+}
+.loginBox a
+{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+            
+        </style>
 
         
 
-        </style>
-
     </head>
 
-    <body class="hold-transition login-page">
-    <div class="login-box fondo brightness">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="login-logo card">
-                <a href="<?php echo site_url(); ?>"><b>Admin</b>OP</a>
-            </div><!-- /.login-logo -->
-            <div class="login-box-body">
-                <p class="login-box-msg">Iniciar Sessión</p>
-                <form role="form" method="post" accept-charset="utf-8" action="<?php echo site_url("sessions/authenticate"); ?>">
-                  <div class="form-group has-feedback">
-                    <input type="text" class="form-control" id="usuario" name="usuario" autocomplete="off" placeholder="Usuario" required>
-                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                  </div>
-                  <div class="form-group has-feedback">
-                    <input type="password" class="form-control" id="pass" name="pass" autocomplete="off" placeholder="Contraseña" required>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                  </div>
-                  <?php if ($error == 1) { ?>
+    <body class="">
+
+        <div class="loginBox">
+            
+            <a href="<?= base_url('') ?>"><h2 class="border-bottom">Noble && Jase</h2></a>
+            <h3>Iniciar Sesión</h3>
+            <form role="form" method="post" accept-charset="utf-8" action="<?php echo site_url("sessions/authenticate"); ?>">
+                <p>Usuario</p>
+                <input type="text"  id="usuario" name="usuario" autocomplete="off" placeholder="Usuario" required>
+                <p>Contraseña</p>
+                <input type="password" id="pass" name="pass" autocomplete="off" placeholder="Contraseña" required>
+                <?php if ($error == 1) { ?>
                         <br>
                         <div class="alert alert-dismissable alert-danger">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -55,126 +134,18 @@
                         </div>
                         <br>
                     <?php } ?>
-                  <div class="row">
-                    <div class="col-xs-8">
-                      <div class="checkbox icheck">
-                        <label>
-                          <input type="checkbox"> Recordarme
-                        </label>
-                      </div>
-                    </div><!-- /.col -->
-                    <div class="col-xs-4">
-                      <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-                    </div><!-- /.col -->
-                  </div>
-                </form>
-
-
-            </div><!-- /.login-box-body -->
+                <input type="submit" name="" value="Entrar">
+             
+            </form>
         </div>
-      
-    </div><!-- /.login-box -->
-
-    <!-- jQuery 2.1.4 -->
-    <script src="<?php echo site_url(); ?>/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="<?php echo site_url(); ?>/bootstrap/js/bootstrap.min.js"></script>
-    <!-- iCheck -->
-    <script src="<?php echo site_url(); ?>/plugins/iCheck/icheck.min.js"></script>
-    <script>
-      $(function () {
-        $('input').iCheck({
-          checkboxClass: 'icheckbox_square-blue',
-          radioClass: 'iradio_square-blue',
-          increaseArea: '20%' // optional
-        });
-      });
+   
+<script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript">
     </script>
 </body>
-</html>
-
-        
-     
-           <!--
-            <div class="container fondo">
-                <div class="container color">
-
-                    <div class="row login">
-                        <div class="col-md-4 col-sm-offset-4 box">
-                            
-                            <div class="row">
-                                <div class="col-md-10 col-md-offset-1">
-                                    <h3>
-                                        LOGIN
-                                    </h3>
-                                </div>
-                                <div class="col-md-10 col-md-offset-1">
-                                    <form role="form" method="post" accept-charset="utf-8" action="<?php echo site_url("sessions/authenticate"); ?>" >
-                                        <div class="form-group">
-                                            <label for="usuario">Usuario:</label><input type="text" class="form-control" id="usuario" name="usuario" autocomplete="off" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pass">Contraseña:</label><input type="password" class="form-control" id="pass" name="pass" autocomplete="off" required>
-
-                                        </div>
-                                        <?php if ($error == 1) { ?>
-                                            <br>
-                                            <div class="alert alert-dismissable alert-danger">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                <h4>
-                                                    Alerta!
-                                                </h4> <strong>Error de Acceso</strong> <?php echo $this->session->userdata("error_txt"); ?>
-                                            </div>
-                                            <br>
-                                        <?php } ?>
-                                        <button type="submit" class="btn btn-success">Acceso</button>
-                                    </form>
-                                </div>
-                            </div>
-                            
-
-                            
-                            
-                        </div>
-                    </div>
-
-                    <!--
-                    <div class="row clearfix">
-                        
-                        <div class="col-md-6 column">
-                            <h3>
-                                Acceso al sistema
-                            </h3>
-
-                            <form role="form" method="post" accept-charset="utf-8" action="<?php echo site_url("sessions/authenticate"); ?>" >
-                                <div class="form-group">
-                                    <label for="usuario">Usuario:</label><input type="text" class="form-control" id="usuario" name="usuario" autocomplete="off" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pass">Contraseña:</label><input type="password" class="form-control" id="pass" name="pass" autocomplete="off" required>
-
-                                </div>
-                                <?php if ($error == 1) { ?>
-                                    <br>
-                                    <div class="alert alert-dismissable alert-danger">
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                        <h4>
-                                            Alerta!
-                                        </h4> <strong>Error de Acceso</strong> <?php echo $this->session->userdata("error_txt"); ?>
-                                    </div>
-                                    <br>
-                                <?php } ?>
-                                <button type="submit" class="btn btn-success">Acceso</button>
-                            </form>
-
-                        </div>
-                    </div>
-              
-                </div>
-            </div>
-            --!>
-            
-       
-        
-    </body>
 </html>

@@ -33,18 +33,12 @@ class User_model extends CI_Model {
         $this->session->set_userdata('error', 0);
         $this->session->set_userdata('id', $id_usuario);
         $this->session->set_userdata('nombre', $nombre); 
-        $this->session->set_userdata('perfil', $row->idTipo); 
         $this->session->set_userdata('admin', $row->admin);
-        $this->session->set_userdata('SuperUsuario', $row->SuperUsuario);
+
+        $buscador = $this->input->post('buscando');
+        $this->session->set_userdata('buscando', $buscador);
+       
         
-        $data = array();
-        $data['idUsuario'] = $id_usuario;
-        $data['Nombre'] = $nombre;
-        $data['Fecha'] = date('Y-m-d h:m:s');
-        $data['Server'] = base_url();
-        $data['IPClient'] = $_SERVER['REMOTE_ADDR'];
-        $data['Browser'] = $_SERVER['HTTP_USER_AGENT'];
-        $this->db->insert('log_Users', $data);
         return true;
     }
     

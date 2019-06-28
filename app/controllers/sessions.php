@@ -41,11 +41,7 @@ function on_load_page(){
         if ($this->User_model->authenticate($this->input->post('usuario'), $this->input->post('pass')))
         {
             
-            if(is_contractor())  {
-                header('Location: '.base_url("home/"));
-            } else{
-                 header('Location: '.base_url());
-            }
+            header('Location: '.base_url('admin'));
             
             
         }
